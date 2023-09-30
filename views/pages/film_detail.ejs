@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('../components/head') %>
+  </head>
+  <body class="">
+    <!-- navbar -->
+    <%- include('../components/navbar') %>
+    
+    <!-- Content -->
+    
+    <div class="d-flex justify-content-center p-5 " >
+      <div class="bg-light d-flex justify-content-center shadow p-3  bg-body-tertiary rounded" style="width: 90%;">
+        <h1><%= detail[0].title %></h1>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center " >
+      <div class="bg-light d-flex justify-content-center shadow p-1 mb-5 bg-body-tertiary rounded" style="width: 90%;">
+
+        <!-- card film -->
+        <div class="d-flex justify-content-center p-5  flex-wrap">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Release</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<%= detail[0].release_year%>"
+                 readonly>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Rating</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<%= detail[0].rating%>"
+                 readonly>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Length</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<%= detail[0].length%> minute"
+                 readonly>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+                <textarea class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" readonly><%= detail[0].description%></textarea>
+            </div>
+           
+          
+          
+        </div>
+    <!-- end of card film -->
+
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
